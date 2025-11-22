@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeric Ponce Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css"> 
+    <script>
+        // Tailwind configuration to use Montserrat font
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <span class="logo-span">J</span>eric 
+            <span class="logo-span">P</span>once</span>
+        </div>
+
+        <div id="desktop-links" class="text-lg">
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <button id="hamburger-icon" onclick="toggleMenu()">
+            <span class="hamburger-line line1"></span>
+            <span class="hamburger-line line2"></span>
+            <span class="hamburger-line line3"></span>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="transform -translate-x-full">
+        <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="home">
+            <div class="hero-content-left">
+                <p class="intro-text">Hello, I'm</p>
+                <h1 class="main-name">Jeric Ponce</h1>
+            </div>
+            <div class="hero-image-container">
+                <img src="images/formal portfolio picture.jpg" alt="Formal Portfolio Picture">
+            </div>
+            <div class="hero-content-right">
+                <p class="intro-text">Creative</p>
+                <h1 class="main-profession">Web Developer</h1>
+            </div>
+        </section>
+        
+        <section id="about" class="min-h-screen py-16 px-8 md:px-28 text-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#ef4444]">
+                About Me 🧑‍💻
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-8 text-lg opacity-80">
+                <p>
+                    I am **Jeric Ponce**, a passionate and detail-oriented Creative Web Developer. My journey in development is focused on building responsive, aesthetically pleasing, and highly functional web applications. I thrive in environments where design meets robust engineering.
+                </p>
+                <p>
+                    My core expertise includes modern JavaScript frameworks, efficient backend development, and ensuring seamless user experiences across all devices. I believe that a great website starts with clean code and ends with a delighted user.
+                </p>
+                <p>
+                    Outside of coding, I enjoy learning new technologies and contributing to open-source projects. Feel free to explore my work in the projects section below!
+                </p>
+            </div>
+        </section>
+
+        <section id="experience" class="min-h-screen py-16 px-8 md:px-28 text-white bg-gray-900 bg-opacity-30">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#ef4444]">
+                Experience & Skills 🚀
+            </h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-center opacity-80">
+                
+                <div class="p-6 border border-[#ef4444]/50 rounded-lg shadow-xl hover:shadow-red-700/30 transition duration-300">
+                    <h3 class="text-3xl font-semibold mb-4 text-white">
+                        Skills
+                    </h3>
+                    <p class="text-lg">
+                        **Frontend:** HTML5, CSS3, JavaScript (ES6+), React, Vue, Tailwind CSS.
+                    </p>
+                    <p class="text-lg mt-2">
+                        **Backend/DB:** Node.js, Express, Python, MongoDB, PostgreSQL.
+                    </p>
+                    <p class="text-lg mt-2">
+                        **Tools:** Git, Docker, VS Code, Figma.
+                    </p>
+                </div>
+
+                <div class="p-6 border border-[#ef4444]/50 rounded-lg shadow-xl hover:shadow-red-700/30 transition duration-300">
+                    <h3 class="text-3xl font-semibold mb-4 text-white">
+                        Work History
+                    </h3>
+                    <ul class="space-y-4 text-left">
+                        <li>
+                            <p class="font-bold text-[#ef4444]">Creative Developer</p>
+                            <p class="text-sm">Tech Solutions Inc. | 2022 - Present</p>
+                            <p class="text-sm opacity-70">Developed and maintained high-traffic company websites.</p>
+                        </li>
+                        <li>
+                            <p class="font-bold text-[#ef4444] mt-3">Junior Web Designer</p>
+                            <p class="text-sm">Design Studio Co. | 2020 - 2022</p>
+                            <p class="text-sm opacity-70">Assisted in front-end implementation for client projects.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="min-h-screen py-16 px-8 md:px-28 text-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#ef4444]">
+                My Projects 💡
+            </h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 opacity-80">
+                <div class="border border-white/10 p-4 rounded-lg shadow-lg bg-gray-900/50">
+                    <h3 class="text-xl font-bold text-[#ef4444] mb-2">Project X - Portfolio Site</h3>
+                    <p class="text-sm">A full-stack application built with React and Node.js for managing personal investments.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">React</span>
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">Node</span>
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">MongoDB</span>
+                    </div>
+                </div>
+                 <div class="border border-white/10 p-4 rounded-lg shadow-lg bg-gray-900/50">
+                    <h3 class="text-xl font-bold text-[#ef4444] mb-2">E-commerce Platform</h3>
+                    <p class="text-sm">Designed and developed a scalable e-commerce site using Vue and Express.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">Vue.js</span>
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">Express</span>
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                    </div>
+                </div>
+                 <div class="border border-white/10 p-4 rounded-lg shadow-lg bg-gray-900/50">
+                    <h3 class="text-xl font-bold text-[#ef4444] mb-2">CSS Animation Library</h3>
+                    <p class="text-sm">A collection of custom CSS and JavaScript animations for modern UIs.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">CSS</span>
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">JavaScript</span>
+                        <span class="bg-red-800/50 text-xs px-2 py-1 rounded">GSAP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 px-8 md:px-28 text-white">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[#ef4444]">
+                Get In Touch 👋
+            </h2>
+            <div class="max-w-xl mx-auto opacity-80 space-y-6">
+                <p class="text-center text-lg">
+                    I am currently open to new opportunities and exciting collaborations. Feel free to send me a message!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="mailto:your.email@example.com" class="text-center bg-[#ef4444] text-white py-3 px-6 rounded-full font-semibold hover:bg-red-700 transition duration-300">
+                        Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-center border-2 border-white text-white py-3 px-6 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300">
+                        LinkedIn
+                    </a>
+                </div>
+                <form class="mt-10 space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-[#ef4444]">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-[#ef4444]">
+                    <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-[#ef4444]"></textarea>
+                    <button type="submit" class="w-full bg-[#ef4444] text-white py-3 rounded-lg font-bold hover:bg-red-700 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+        
+        <footer class="py-6 text-center text-sm text-gray-500 border-t border-gray-800 mt-10">
+            <p>&copy; 2025 Jeric Ponce. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburger.classList.toggle('is-active');
+            mobileMenu.classList.toggle('-translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+        }
+    </script>
+</body>
+</html>
