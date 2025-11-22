@@ -9,7 +9,7 @@
 /* --- Global / Body Reset --- */
 body {
     min-height: 100vh;
-    background-color: #cc1616;
+    background-color: #000000;
     font-family: 'Montserrat', 'sans-serif';
     margin: 0;
     padding: 0;
@@ -314,4 +314,5 @@ body::before {
     #mobile-menu {
         display: none !important;
     }
+
 }
